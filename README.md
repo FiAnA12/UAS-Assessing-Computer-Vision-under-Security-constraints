@@ -1,2 +1,2 @@
-# UAS-Assessing-Computer-Vision-under-Security-constraints
+# UAS Computer Vision Conflict Detection Under Secure Communication Constraints
 This repository contains the complete Python implementation used to conduct all 78 experimental runs reported in the dissertation. The code evaluates the impact of cryptographic security mechanisms and network constraints on a computer vision-based UAS traffic monitoring pipeline, across four evaluation phases and six traffic density scenarios.
