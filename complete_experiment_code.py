@@ -4,7 +4,7 @@ Assessing Computer Vision-Based Conflict Detection in UAS Traffic Monitoring
 Under Secure Communication Constraints
 
 Author: PhD Candidate - Electrical Engineering & Computer Science
-Date: 2025
+Date: 2026
 
 This code implements all 78 experimental runs across 4 phases:
 - Phase 1: Baseline (6 runs)
