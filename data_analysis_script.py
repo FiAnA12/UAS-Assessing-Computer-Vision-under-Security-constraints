@@ -3,7 +3,7 @@ Complete Data Analysis and Visualization Script
 Generates all figures and tables for Chapter 7: Results and Discussion
 
 Usage:
-    python analyze_results.py
+    python data_analysis_script.py
 
 Outputs:
     - All publication-ready figures (PNG, PDF)
