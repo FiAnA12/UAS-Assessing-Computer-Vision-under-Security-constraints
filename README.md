@@ -11,7 +11,7 @@
 
 ## Overview
 
-This repository contains the complete Python implementation used to conduct all 78 experimental runs reported in the dissertation. The code evaluates the impact of cryptographic security mechanisms and network constraints on a computer vision-based UAS traffic monitoring pipeline, across four evaluation phases and six traffic density scenarios.
+This repository contains the complete Python implementation used to conduct all 78 experimental runs reported in the dissertation. It contains the replay-based emulation/simulation implementation used to reproduce the experimental structure. The framework replays fixed UAS traffic scenarios through simulated YOLOv5s-style detection outputs, security emulation, network emulation, and monitoring-evaluation stages. The computer vision stage uses empirically parameterized YOLOv5s timing and detection-performance assumptions rather than live neural-network inference on raw video frames. The code evaluates the impact of cryptographic security mechanisms and network constraints on a computer vision-based UAS traffic monitoring pipeline, across four evaluation phases and six traffic density scenarios.
 
 ---
 
@@ -37,7 +37,7 @@ uas-cv-conflict-detection/
 | 4 — Worst-Case | Maximum security + most constrained network | 12 |
 | **Total** | | **78** |
 
-Each run processes 180 frames (6 seconds at 30 fps) across six traffic density scenarios (low: 2–3 UAS, medium: 4–6 UAS, high: 7–10 UAS).
+Each full dissertation run processes the complete replay scenario duration, approximately 3,600–5,400 frames per scenario at 30 fps. For quick functional testing, the script can be run with a reduced frame count such as 180 frames.
 
 ---
 
@@ -77,7 +77,7 @@ python complete_experiment_code.py
 ```
 
 Output is written to `experiment_results/`:
-- `experiment_plan.json` — full factorial configuration list
+- `experiment_plan.json` — structured ablation/factor-isolation configuration list
 - `exp_NNN_config.yaml` — per-run configuration
 - `exp_NNN_metrics.csv` — per-frame latency measurements
 - `exp_NNN_summary.json` — aggregated run statistics
