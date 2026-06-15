@@ -1,5 +1,5 @@
 """
-Complete Experimental Implementation for PhD Dissertation
+Complete Experimental Implementation for PhD Dissertation/Replay-Based Emulation/Simulation Implementation
 Assessing Computer Vision-Based Conflict Detection in UAS Traffic Monitoring 
 Under Secure Communication Constraints
 
@@ -312,12 +312,12 @@ class ExperimentRunner:
         self.packet_losses = 0
         self.total_frames = 0
         
-    def run(self, num_frames: int = 180) -> Dict:
+    def run(self, num_frames: int = 3600) -> Dict:
         """
         Run experiment for specified number of frames
         
         Args:
-            num_frames: Number of frames to process (180 = 6 seconds at 30fps)
+            num_frames: Number of frames to process. Default is 3600 frames, corresponding to approximately 2 minutes at 30 fps. For quick testing, this value can be reduced.
         
         Returns:
             Summary metrics dictionary
@@ -689,12 +689,21 @@ def main():
     # Run all experiments
     start_time = time.time()
     all_summaries = []
+
+    scenario_frames = {
+    "low_density_01": 3600,
+    "low_density_02": 4200,
+    "med_density_01": 4500,
+    "med_density_02": 4800,
+    "high_density_01": 5100,
+    "high_density_02": 5400,
+}
     
     for i, exp_config in enumerate(experiments, 1):
         print(f"\n[{i}/{len(experiments)}] {exp_config.exp_id}")
         
         runner = ExperimentRunner(exp_config, output_dir)
-        summary = runner.run(num_frames=180)  # 6 seconds at 30fps
+        summary = runner.run(num_frames=scenario_frames[exp_config.scenario])  # approximately 2 minutes at 30 fps
         all_summaries.append(summary)
         
         # Progress update
