@@ -125,7 +125,6 @@ Output is written to `analysis_output/`:
 
 - All random seeds are fixed (`np.random.seed(42)`) for deterministic output.
 - The exact code snapshot used for dissertation results is tagged: `v1.0-dissertation-submission`
-- A permanent archived version is available on Zenodo: *(DOI to be assigned upon dissertation acceptance)*
 
 ---
 
