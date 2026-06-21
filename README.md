@@ -135,7 +135,7 @@ If you use this code in your research, please cite:
 ```
 Anaroua, F. I. (2026). Assessing Computer Vision-Based Conflict Detection in UAS 
 Traffic Monitoring Under Secure Communication Constraints [Doctoral dissertation, 
-Embry-Riddle Aeronautical University]. https://github.com/fanaroua/uas-cv-conflict-detection
+Embry-Riddle Aeronautical University].
 ```
 
 ---
